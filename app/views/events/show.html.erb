@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @event.driver %>
+</p>
+
+<p>
+  <strong>Client name:</strong>
+  <%= @event.client_name %>
+</p>
+
+<p>
+  <strong>Client phone:</strong>
+  <%= @event.client_phone %>
+</p>
+
+<p>
+  <strong>Client email:</strong>
+  <%= @event.client_email %>
+</p>
+
+<p>
+  <strong>Client address:</strong>
+  <%= @event.client_address %>
+</p>
+
+<p>
+  <strong>Pickup:</strong>
+  <%= @event.pickup %>
+</p>
+
+<p>
+  <strong>Dropoff:</strong>
+  <%= @event.dropoff %>
+</p>
+
+<p>
+  <strong>Milage out:</strong>
+  <%= @event.milage_out %>
+</p>
+
+<p>
+  <strong>Milage return:</strong>
+  <%= @event.milage_return %>
+</p>
+
+<p>
+  <strong>Driver comment:</strong>
+  <%= @event.driver_comment %>
+</p>
+
+<p>
+  <strong>Client comment:</strong>
+  <%= @event.client_comment %>
+</p>
+
+<p>
+  <strong>Pickup location:</strong>
+  <%= @event.pickup_location %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @event.destination %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

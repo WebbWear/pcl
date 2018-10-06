@@ -1,0 +1,82 @@
+<%= form_with(model: event, local: true) do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :driver %>
+    <%= form.text_field :driver %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_name %>
+    <%= form.text_field :client_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_phone %>
+    <%= form.text_field :client_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_email %>
+    <%= form.text_field :client_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_address %>
+    <%= form.text_area :client_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pickup %>
+    <%= form.time_select :pickup %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dropoff %>
+    <%= form.time_select :dropoff %>
+  </div>
+
+  <div class="field">
+    <%= form.label :milage_out %>
+    <%= form.number_field :milage_out %>
+  </div>
+
+  <div class="field">
+    <%= form.label :milage_return %>
+    <%= form.number_field :milage_return %>
+  </div>
+
+  <div class="field">
+    <%= form.label :driver_comment %>
+    <%= form.text_area :driver_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_comment %>
+    <%= form.text_area :client_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pickup_location %>
+    <%= form.text_area :pickup_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_area :destination %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

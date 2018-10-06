@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  driver: MyString
+  client_name: MyString
+  client_phone: MyString
+  client_email: MyString
+  client_address: MyText
+  pickup: 2018-10-04 13:49:59
+  dropoff: 2018-10-04 13:49:59
+  milage_out: 1
+  milage_return: 1
+  driver_comment: MyText
+  client_comment: MyText
+  pickup_location: MyText
+  destination: MyText
+
+two:
+  driver: MyString
+  client_name: MyString
+  client_phone: MyString
+  client_email: MyString
+  client_address: MyText
+  pickup: 2018-10-04 13:49:59
+  dropoff: 2018-10-04 13:49:59
+  milage_out: 1
+  milage_return: 1
+  driver_comment: MyText
+  client_comment: MyText
+  pickup_location: MyText
+  destination: MyText
