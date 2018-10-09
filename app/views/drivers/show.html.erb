@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<li class="list-group-item list-group-item-light">
   <strong>Name:</strong>
   <%= @driver.name %>
 </p>
 
 <p>
-  <strong>Dl number:</strong>
+  <strong>Drivers Lic Number:</strong>
   <%= @driver.dl_number %>
 </p>
 
@@ -30,5 +30,4 @@
   <%= @driver.email %>
 </p>
 
-<%= link_to 'Edit', edit_driver_path(@driver) %> |
-<%= link_to 'Back', drivers_path %>
+<%= link_to 'Edit', edit_driver_path(@driver) %>

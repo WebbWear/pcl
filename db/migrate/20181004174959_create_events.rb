@@ -6,8 +6,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :client_phone
       t.string :client_email
       t.text :client_address
-      t.time :pickup
-      t.time :dropoff
+      t.datetime :pickup
+      t.datetime :dropoff
       t.integer :milage_out
       t.integer :milage_return
       t.text :driver_comment

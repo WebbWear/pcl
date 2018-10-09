@@ -11,37 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :dl_number %>
-    <%= form.text_field :dl_number %>
+    <%= form.text_field :dl_number, class: 'form-control' %>
   </div>
-
-  <div class="field">
+    
+  <div class="form-group">
     <%= form.label :address %>
-    <%= form.text_area :address %>
-  </div>
+    <%= form.text_area :address, class: 'form-control' %>
+  </div>  
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :phone %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :img %>
-    <%= form.text_field :img %>
-  </div>
+    <%= form.text_field :img, class: 'form-control' %>
+  </div>  
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
+    <%= form.text_field :email, class: 'form-control' %>
+  </div>  
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
