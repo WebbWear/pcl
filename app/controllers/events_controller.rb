@@ -27,6 +27,8 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
 
+    @event.dropoff = @event.pickup + 3.hours
+
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: "Event was successfully created." }
@@ -71,6 +73,6 @@ class EventsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def event_params
-    params.require(:event).permit(:driver, :client_name, :client_phone, :client_email, :client_address, :pickup, :dropoff, :milage_out, :milage_return, :driver_comment, :client_comment, :pickup_location, :destination)
+    params.require(:event).permit(:driver_id, :client_name, :client_phone, :client_email, :client_address, :pickup, :dropoff, :milage_out, :milage_return, :driver_comment, :client_comment, :pickup_location, :destination)
   end
 end

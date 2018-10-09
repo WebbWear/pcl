@@ -1,0 +1,79 @@
+<%= form_with(model: @event, local: true, url: driver_log_path(@driver, @event)) do |form| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <strong>Client name:</strong>
+    <%= @event.client_name %>
+    </p>
+
+    <p>
+    <strong>Client phone:</strong>
+    <%= @event.client_phone %>
+    </p>
+
+    <p>
+    <strong>Client email:</strong>
+    <%= @event.client_email %>
+    </p>
+
+    <p>
+    <strong>Client address:</strong>
+    <%= @event.client_address %>
+    </p>
+
+    <p>
+    <strong>Client comment:</strong>
+    <%= @event.client_comment %>
+    </p>
+
+    <p>
+    <strong>Pickup location:</strong>
+    <%= @event.pickup_location %>
+    </p>
+
+    <p>
+    <strong>Destination:</strong>
+    <%= @event.destination %>
+    </p>
+
+  <div class="field">
+    <%= form.label :pickup %>
+    <%= form.datetime_select :pickup %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dropoff %>
+    <%= form.datetime_select :dropoff %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :milage_out %>
+    <%= form.number_field :milage_out, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :milage_return %>
+    <%= form.number_field :milage_return, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :driver_comment %>
+    <%= form.text_area :driver_comment, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

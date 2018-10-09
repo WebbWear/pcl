@@ -6,7 +6,6 @@
   <table class="table">
     <thead>
       <tr>
-        <th></th>
         <th scope="col">Name</th>
         <th scope="col">Phone</th>
         <th scope="col">Pickup</th>
@@ -16,16 +15,11 @@
     <tbody>
       <% @events.each do |event| %>
         <tr>
-          <td><%= event.driver.try(:name) %></td>
-          <td><%= link_to event.client_name, event %></td>
+          <td><%= link_to event.client_name, driver_log_path(@driver, event) %></td>
           <td><%= event.client_phone %></td>
           <td><%= event.pickup %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
 </div>
-
-
-<%= link_to 'New Event', new_event_path %>
