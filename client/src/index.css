@@ -1,0 +1,17 @@
+@import "~react-big-calendar/lib/css/react-big-calendar.css";
+
+body {
+  background-color: rgb(39, 39, 39);
+
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.rbc-event.pending {
+  background-color: rebeccapurple;
+}
+
+.rbc-event.unconfirmed {
+  background-color: red;
+}

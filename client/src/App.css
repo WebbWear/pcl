@@ -1,0 +1,201 @@
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  /* justify-content: l; */
+  background-color: black;
+  background-color: #efefef;
+  height: 84px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  /* padding: 25px; */
+  /* color:white; */
+}
+
+.App-logo {
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  position: absolute;
+  left: 0;
+  align-items: center;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul {
+  background: #efefef;
+  /* background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);   */
+  box-shadow: px 0px 5px rgba(0, 0, 0, 0.15);
+  padding: 0 10px;
+  /* border-radius: 10px;   */
+  list-style: none;
+  position: relative;
+  display: inline-table;
+}
+nav ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+nav ul li {
+  float: left;
+}
+nav ul li:hover {
+  background: #4b545f;
+  background: linear-gradient(to left, #4f5964 0%, #5f6975 40%);
+}
+
+nav ul li:hover a {
+  color: #fff;
+}
+
+nav ul li a {
+  display: block;
+  padding: 25px 30px;
+  color: #757575;
+  text-decoration: none;
+}
+
+/* End Nav */
+
+h1 {
+  color: white;
+}
+
+/* home page 50/50 split notes/calendar */
+
+.main {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 900px;
+  margin: 8px;
+
+  /* border: 1px solid blue; */
+}
+
+
+/* submission form */
+  .container {
+    display: grid;
+    justify-self: center;
+
+  }
+  
+  .form-header {
+    text-align: center;
+    border-bottom: white solid;
+  } 
+
+  .submission-form {
+    display: grid;
+    justify-content: center;
+    color: #fff;
+    max-width: 420px;
+    /* margin: 2em; */
+    padding: 2em;
+    background-color: #757575;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+    /* border: 1px solid white; */
+
+  }
+
+  
+  .address {
+    height: 50px;
+  }
+  /* added submission form */
+  /* submit button */
+  .button5 {
+    margin-top: 1em;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 22px;
+    color: black;
+    padding: 5px 50px 5px 50px;
+    border: 1px solid #999;
+  
+    text-shadow: 0px 1px 1px #CCC;
+    text-decoration: none;
+  
+    -moz-box-shadow: 0 1px 3px #111;
+    -webkit-box-shadow: 0 1px 3px #111;
+    box-shadow: 0 1px 3px #111;
+  
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+  
+    background: #696969;
+    background: -moz-linear-gradient(top, #d1d1d1 10%, #7b7b7b 60%, #696969 80%, #696969 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#7b7b7b), color-stop(0.4, #d1d1d1), color-stop(0.8, #7b7b7b), color-stop(.9, #696969), color-stop(0.9, #696969));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#7b7b7b', GradientType=0 );
+  
+    cursor: pointer;
+  
+  }
+  .button5:hover {
+    color: rgb(249, 250, 249);
+  }
+  
+  
+
+  /* submission form */
+
+
+.calendar {
+  grid-column: 2;
+  justify-content:center;
+  align-items:center;
+  height: 100%;
+  align-self: end;
+  /* border: 1px solid yellow; */
+}
+/* footer */
+.footer {
+  bottom:0;
+  height: 80px;
+  color: white;
+  /* border: 1px solid green; */
+  /* position:absolute; */
+  /* padding: 2em; */
+}
+
+/* gallery page images */
+
+.gallery {
+  
+  display: grid;
+  grid-area: main;
+  /* justify-content: center; */
+}
+
+/* Calender */
+
+.rbc-calendar {
+  background: whitesmoke;
+}
+
+/* ---------------------------- Media Queries-------------------------------- */
