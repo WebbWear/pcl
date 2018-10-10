@@ -51,7 +51,7 @@ class Notes extends Component {
 
     console.log({pickup})
 
-    fetch('/events', {
+    fetch('/admin/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

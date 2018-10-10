@@ -21,7 +21,7 @@ class Calendar extends Component {
   }
 
   fetchEvents () {
-    fetch('/events.json').then(r => r.json()).then(events => {
+    fetch('/admin/events.json').then(r => r.json()).then(events => {
       this.setState({ events })
     })
   }
