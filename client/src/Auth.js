@@ -3,13 +3,11 @@ import auth0 from 'auth0-js';
 
 import history from './history';
 
-// ...
-
 export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'webbwear.auth0.com',
     clientID: 'G4604sM7b3fFLrUm5xSQXHaTviTEvmhL',
-    redirectUri: 'http://localhost:3001/callback',
+    redirectUri: process.env.NODE_ENV === 'production' ? 'http://www.palmaceialimo.com' : 'http://localhost:3001/callback',
     responseType: 'token id_token',
     scope: 'openid'
   });
