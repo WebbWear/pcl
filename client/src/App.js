@@ -27,10 +27,10 @@ class App extends Component {
     return (
       <Router history={history}>
         <div>
-          <Header auth={auth} />
+          <Route render={(props) => <Header auth={auth} {...props} />}/>
           <div className="container">
             <Switch>
-              <Route path="/" exact render={(props) => auth.isAuthenticated() ? <Main {...props} /> : <Home {...props} /> }/>
+              <Route path="/" exact render={(props) => auth.isAuthenticated() ? <Main auth={auth} {...props} /> : <Home auth={auth} {...props} /> }/>
               <Route path="/pictures" exact component={Pics}/>
               <Route path="/contact" exact component={Contact}/>
               <Route path="/callback" render={props => {

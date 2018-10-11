@@ -43,7 +43,7 @@ class Main extends Component {
     render() {
       return (
         <div className="main">
-        <Notes onUpdatePendingEvent={this.updatePendingEvent} pendingEvent={this.state.pendingEvent} onEventSubmitted={this.resetPendingDate} />
+        <Notes auth={this.props.auth} onUpdatePendingEvent={this.updatePendingEvent} pendingEvent={this.state.pendingEvent} onEventSubmitted={this.resetPendingDate} />
         <Calendar pendingEvent={this.state.pendingEvent} onSelectDate={this.handleDateChange} />
         </div>
       );

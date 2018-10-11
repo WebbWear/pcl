@@ -31,6 +31,15 @@ class Notes extends Component {
     })
   }
 
+  componentDidMount() {
+    const profile = this.props.auth.profile()
+    this.setState({
+      client_name: [profile.given_name, profile.family_name].join(' '),
+      client_email: profile.email
+    })
+    console.log(this.props.auth.profile())
+  }
+
   handleSubmit = (event) => {
     event.preventDefault()
 

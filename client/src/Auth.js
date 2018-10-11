@@ -1,6 +1,6 @@
 // src/Auth/Auth.js
 import auth0 from 'auth0-js';
-
+import jwtDecode from 'jwt-decode';
 import history from './history';
 
 export default class Auth {
@@ -9,7 +9,7 @@ export default class Auth {
     clientID: 'G4604sM7b3fFLrUm5xSQXHaTviTEvmhL',
     redirectUri: process.env.NODE_ENV === 'production' ? 'http://www.palmaceialimo.com/callback' : 'http://localhost:3001/callback',
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid profile email'
   });
 
   login() {
@@ -57,5 +57,13 @@ export default class Auth {
     // Access Token's expiry time
     let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
+  }
+
+  profile() {
+    if (this.isAuthenticated()) {
+      return jwtDecode(localStorage.getItem('id_token'))
+    } else {
+      return {}
+    }
   }
 }

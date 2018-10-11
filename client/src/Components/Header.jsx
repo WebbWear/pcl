@@ -7,39 +7,43 @@ import logo from "./images/sm_web_logo.png";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
+  
   render() {
-    const { auth } = this.props;
-
-    return (
-        <div className="wrapper">
-          <img src={logo} className="App-logo" alt="logo" />
-          <nav>
-            <ul>
-              <li>
-                <Link to={"/"}>Home</Link>
-              </li>
-              <li>
-                <Link to={"/pictures"}>Pics</Link>
-              </li>
-              <li>
-                {/* <Link to={"/contact"}>Contact</Link> */}
-              </li>
-              <li>
-                {!auth.isAuthenticated() && (
-                  <button onClick={auth.login}>
-                    Log In
-                  </button>
-                )}
-                {auth.isAuthenticated() && (
-                  <button onClick={auth.logout}>
-                    Log Out
-                  </button>
-                )}
-              </li>
-            </ul>
-          </nav>
-        </div>
-    );
+    const { auth, location } = this.props;
+    if (location.pathname !== "/" || auth.isAuthenticated()) {
+      return (
+          <div className="wrapper">
+            <img src={logo} className="App-logo" alt="logo" />
+            <nav>
+              <ul>
+                <li>
+                  <Link to={"/"}>Home</Link>
+                </li>
+                <li>
+                  <Link to={"/pictures"}>Pics</Link>
+                </li>
+                <li>
+                  {/* <Link to={"/contact"}>Contact</Link> */}
+                </li>
+                <li>
+                  {!auth.isAuthenticated() && (
+                    <button onClick={auth.login}>
+                      Log In
+                    </button>
+                  )}
+                  {auth.isAuthenticated() && (
+                    <button onClick={auth.logout}>
+                      Log Out
+                    </button>
+                  )}
+                </li>
+              </ul>
+            </nav>
+          </div>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
