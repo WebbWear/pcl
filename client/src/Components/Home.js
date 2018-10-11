@@ -7,10 +7,14 @@ class Home extends Component {
 
     return (
       <div>
-        Home.
+        <img src="../images/PCL_logo-landing_page.png"/>
       </div>
     );
   }
 }
 
 export default Home;
+
+
+
+
