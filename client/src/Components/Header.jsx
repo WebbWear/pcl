@@ -21,20 +21,18 @@ class Header extends Component {
                 </li>
                 <li>
                   <Link to={"/pictures"}>Pics</Link>
-                </li>
-                <li>
-                  {/* <Link to={"/contact"}>Contact</Link> */}
-                </li>
+                </li>              
+
                 <li>
                   {!auth.isAuthenticated() && (
-                    <button onClick={auth.login}>
+                    <a onClick={auth.login}>
                       Log In
-                    </button>
+                    </a>
                   )}
                   {auth.isAuthenticated() && (
-                    <button onClick={auth.logout}>
+                    <a onClick={auth.logout}>
                       Log Out
-                    </button>
+                    </a>
                   )}
                 </li>
               </ul>
