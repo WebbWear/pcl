@@ -1,3 +1,3 @@
 class Driver < ApplicationRecord
-  has_many :events
+  has_many :drivers
 end

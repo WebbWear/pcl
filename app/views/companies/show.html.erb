@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<li class="list-group-item list-group-item-light">
+  <strong>Company:</strong>
+  <%= @company.display_name %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @company.owner_name %>
+</p>
+
+<p>
+  <strong>Vehicles:</strong>
+  <%= @company.vehicles %>
+</p>
+
+<p>
+  <strong>Phone Number:</strong>
+  <%= @company.phone_number %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @company.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @company.email %>
+</p>
+
+<p>
+  <strong>EIN:</strong>
+  <%= @company.ein %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %>

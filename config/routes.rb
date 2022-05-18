@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope :admin do
     resources :drivers
     resources :events
+    resources :companies
   end
 
   get "log/:driver_id", to: "driver_log#index", as: "driver_logs"

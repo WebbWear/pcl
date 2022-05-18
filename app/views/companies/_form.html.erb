@@ -1,0 +1,50 @@
+<%= form_with(model: company, local: true) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :display_name %>
+    <%= form.text_field :display_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :owner_name %>
+    <%= form.text_field :owner_name, class: 'form-control' %>
+  </div>
+    
+  <div class="form-group">
+    <%= form.label :vehicles %>
+    <%= form.text_area :vehicles, class: 'form-control' %>
+  </div>  
+
+  <div class="form-group">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: 'form-control' %>
+  </div>  
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :ein %>
+    <%= form.text_field :ein, class: 'form-control' %>
+  </div> 
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,7 +1,6 @@
 class CreateEvents < ActiveRecord::Migration[5.2]
   def change
     create_table :events do |t|
-      t.string :driver
       t.string :client_name
       t.string :client_phone
       t.string :client_email
