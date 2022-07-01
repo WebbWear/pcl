@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+root to: "events#index"
+
   scope :admin do
     resources :drivers
     resources :events
