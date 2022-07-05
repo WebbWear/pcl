@@ -2,7 +2,9 @@
 
 <h1>Drivers</h1>
 
-<table class="table">
+<%
+=begin%>
+ <table class="table">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -14,6 +16,8 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+
+  
 
   <tbody>
     <% @drivers.each do |driver| %>
@@ -30,7 +34,47 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> 
+<%
+=end%>
+<div class="d-flex justify-content-between">
+  <% @drivers.each do |driver| %>
+    <div class="card" style="width: 20rem;">
+      <div class="rounded mx-auto d-block">
+        <div class="rounded mx-auto d-block">
+          <div class="mt-2 ml-2 d-block">
+            <%= image_tag "jwebb.jpg", height: 90 %>
+          </div>
+
+          <div class="card-body">
+            <div class="row">
+          <div class="col-12">
+            <div class="col mb-2">
+              <%= driver.phone %>
+            </div>
+            <div class="col mb-3">
+              <%= driver.email %>
+            </div>
+          </div>
+          </div>
+            <div class="col-6">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Profile', driver %></td></button>
+                <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Edit', edit_driver_path(driver) %></td></button>
+                <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Delete', driver, method: :delete, data: { confirm: 'Are you want to delete profile?' } %></td></td></button>
+              </div>
+              <small class="col-6 text-muted">1 Year</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>
+      
+    
+
 
 <br>
 
