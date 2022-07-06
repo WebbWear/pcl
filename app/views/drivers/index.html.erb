@@ -37,44 +37,67 @@
 </table> 
 <%
 =end%>
-<div class="d-flex justify-content-between">
-  <% @drivers.each do |driver| %>
-    <div class="card" style="width: 20rem;">
-      <div class="rounded mx-auto d-block">
-        <div class="rounded mx-auto d-block">
-          <div class="mt-2 ml-2 d-block">
-            <%= image_tag "jwebb.jpg", height: 90 %>
-          </div>
 
-          <div class="card-body">
+
+
+<div class="container-sm">
+  <div class="d-flex justify-content-between">
+    <% @drivers.each do |driver| %>
+      <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem;">
+        <div class="card-body py-0">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        
+            <div class="col-4 px-0">
+              <%= image_tag "jwebb.jpg", height: 90 %>
+            </div>
+
             <div class="row">
-          <div class="col-12">
-            <div class="col mb-2">
-              <%= driver.phone %>
-            </div>
-            <div class="col mb-3">
-              <%= driver.email %>
-            </div>
-          </div>
-          </div>
-            <div class="col-6">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Profile', driver %></td></button>
-                <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Edit', edit_driver_path(driver) %></td></button>
-                <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Delete', driver, method: :delete, data: { confirm: 'Are you want to delete profile?' } %></td></td></button>
+              <div class="card-body">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 pr-0" alt="Responsive image">
+                    <%= image_tag "5-star-rating.png", height: 20 %>
+                  </div>
+                </div>
+                <div class="row d-flex justify-content-center"> 
+                  <div class="col-8 pr-0">
+                    <small class="text-muted">Member Since: 2015</small>
+                  </div>
+                  
+                </div>
               </div>
-              <small class="col-6 text-muted">1 Year</small>
+            </div>
+          
+
+
+            <div class="card-body pl-0 pr-0">
+              <div class="col pl-0">
+                  <div class="col mb-2 pl-0">
+                    <%= driver.phone %>
+                  </div>
+                  <div class="col mb-3 pl-0">
+                    <%= driver.email %>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body text-center py-0">
+              
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Profile', driver %></td></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Edit', edit_driver_path(driver) %></td></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><td><%= link_to 'Delete', driver, method: :delete, data: { confirm: 'Are you want to delete profile?' } %></td></td></button>
+                </div>
+              
+              
             </div>
           </div>
         </div>
       </div>
-
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
       
     
-
 
 <br>
 
